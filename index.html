@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Formation - Interactive Pages</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8ff;
+            color: #333;
+        }
+        .slide {
+            padding: 40px 80px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            min-height: 70vh;
+        }
+        h1, h2 {
+            color: #1a004b;
+            border-bottom: 3px solid #8a2be2;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+
+        /* GitHub Badge Page */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .badge-card {
+            background-color: #f0f0f5;
+            border: 2px solid #8a2be2;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 180px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .badge-card:hover {
+            transform: translateY(-5px);
+        }
+        .badge-label {
+            font-size: 0.9em;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .badge-value {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #1a004b;
+            margin-top: 0;
+        }
+        .badge-icon {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            color: #8a2be2;
+        }
+
+        /* Git Commands Cheat Sheet */
+        .cheat-sheet-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .command-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-left: 5px solid #1a004b;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .command-name {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e91e63;
+            margin: 0 0 5px 0;
+            background-color: #f8f8ff;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .command-description {
+            font-size: 0.95em;
+            color: #555;
+        }
+        .add-command-card {
+            border: 2px dashed #8a2be2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #8a2be2;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .add-command-card:hover {
+            background-color: #f0f0f5;
+        }
+
+    </style>
+</head>
+<body>
+
+  
+<div class="slide">
+    <h2>Visualizing GitHub Contributions by yasser</h2>
+    <p style="text-align: center; color: #555;">
+        This is a **teaching visual** to help understand GitHub. Each badge represents contributions like stars, repositories, followers, and commits. Think of it as a fun way to see your impact on a project!
+    </p>
+
+    <div class="badge-container">
+        <div class="badge-card">
+            <div class="badge-icon">⭐</div>
+            <span class="badge-label">Stars Earned</span>
+            <p class="badge-value">2.5K</p>
+        </div>
+        
+        <div class="badge-card">
+            <div class="badge-icon">📂</div>
+            <span class="badge-label">Repositories</span>
+            <p class="badge-value">42</p>
+        </div>
+        
+        <div class="badge-card">
+            <div class="badge-icon">👤</div>
+            <span class="badge-label">Followers</span>
+            <p class="badge-value">1,350</p>
+        </div>
+
+        <div class="badge-card">
+            <div class="badge-icon">🔥</div>
+            <span class="badge-label">Commit Streak</span>
+            <p class="badge-value">38 Days</p>
+        </div>
+
+        <div class="badge-card">
+            <div class="badge-icon">💻</div>
+            <span class="badge-label">Top Language</span>
+            <p class="badge-value">JavaScript</p>
+        </div>
+        
+        <div class="badge-card">
+            <div class="badge-icon">🚀</div>
+            <span class="badge-label">Your Contribution</span>
+            <p class="badge-value">NEW</p>
+        </div>
+    </div>
+</div>
+
+  
+    <div class="slide">
+        <h2>Git Commands Cheat Sheet</h2>
+        <p style="color: #555;">
+            Quick reference for essential Git commands.
+        </p>
+
+        <div class="cheat-sheet-container">
+            <div class="command-card">
+                <p class="command-name">git init</p>
+                <p class="command-description">Initialize a new local Git repository.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git add .</p>
+                <p class="command-description">Stage all changes for the next commit.</p>
+            </div>
+            
+            <div class="command-card">
+                <p class="command-name">git commit -m "message"</p>
+                <p class="command-description">Save staged changes with a descriptive message.</p>
+            </div>
+            
+            <div class="command-card">
+                <p class="command-name">git push</p>
+                <p class="command-description">Send local commits to a remote repository.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git pull</p>
+                <p class="command-description">Fetch and merge changes from a remote repository.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git clone &lt;url&gt;</p>
+                <p class="command-description">Create a local copy of a remote repository.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git branch</p>
+                <p class="command-description">List, create, or delete branches.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git branch -m &lt;new-name&gt;</p>
+                <p class="command-description">Rename the current branch.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git checkout &lt;branch&gt;</p>
+                <p class="command-description">Switch to another branch.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git merge &lt;branch&gt;</p>
+                <p class="command-description">Merge changes from another branch into the current branch.</p>
+            </div>
+
+            <div class="command-card">
+                <p class="command-name">git remote add &lt;name&gt; &lt;url&gt;</p>
+                <p class="command-description">Add a new remote repository reference.</p>
+            </div>
+
+            <div class="command-card add-command-card">
+                <p style="font-size: 2em; margin: 0;">+</p>
+                <p style="margin: 0; font-weight: bold;">Add Your Favorite Command</p>
+                <p style="font-size: 0.8em; margin: 5px 0 0 0; color: #555;">(Use git add, commit, and push)</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
